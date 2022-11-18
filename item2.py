@@ -37,7 +37,8 @@ def Pn(z, deg):
 
 def g(x, deg):
     """
-
+    Function of supnorm
+    
     Args:
         x : vector
         deg : integer
@@ -67,6 +68,8 @@ Pz2 = Pn(z, degree)
 degree = 21
 print("supnorm (n=20): ", poly_eval.supnorm(g, 1000, -5, 5, degree))
 Pz3 = Pn(z, degree)
+
+# plotting the function and polynomial interpolation
 
 plt.rcParams['figure.figsize'] = [13, 7]
 
