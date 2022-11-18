@@ -27,7 +27,7 @@ def Pn(z, deg):
             degree of polynomial
 
     Returns:
-        Pz: vector
+        Pz : vector
             lagrange interpolation polynomial
     """
     x = np.linspace(-5, 5, deg)
@@ -45,7 +45,7 @@ def g(x, deg):
             degree of polynomial
 
     Returns:
-        g: vector
+        g : vector
             difference of f - Pn
     """
     return f(x) - Pn(x, deg)
@@ -75,7 +75,7 @@ plt.rcParams['figure.figsize'] = [13, 7]
 
 fig, (ax1, ax2, ax3) = plt.subplots(1, 3, sharey=True)
 
-fig.suptitle('Function f and Lagrange Polynomial P_z with different degrees n')
+fig.suptitle('Function f and Lagrange Interpolation Polynomial P_z with different degrees n')
 ax1.plot(z, fz, 'k', z, Pz1, 'b')
 ax1.set_title('n = 5')
 ax2.plot(z, fz, 'k', z, Pz2, 'b')
