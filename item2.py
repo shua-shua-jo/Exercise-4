@@ -5,15 +5,48 @@ import matplotlib.pyplot as plt
 plt.style.use('seaborn-v0_8-pastel')
 
 def f(x):
+    """
+    Polynomial Function
+
+    Args:
+        x : vector
+
+    Returns:
+        f : real number
+            function value at x
+    """
     return 1 / (1 - x**2 + x**4)
 
 def Pn(z, deg):
+    """
+    Polynomial interpolation of f using Lagrange
+
+    Args:
+        z : vector
+        deg : integer
+            degree of polynomial
+
+    Returns:
+        Pz: vector
+            lagrange interpolation polynomial
+    """
     x = np.linspace(-5, 5, deg)
     fx = f(x)
     Pz = poly_eval.LagrangeInterpolation(fx, x, z)
     return Pz
 
 def g(x, deg):
+    """
+
+    Args:
+        x : vector
+        deg : integer
+            degree of polynomial
+
+    Returns:
+        g: vector
+            difference of f - Pn
+    """
     return f(x) - Pn(x, deg)
 
 
