@@ -114,11 +114,11 @@ fig, (ax1, ax2, ax3) = plt.subplots(1, 3, sharey=True)
 
 fig.suptitle('Function f and Lagrange Interpolation Polynomial P_z in different subintervals')
 ax1.plot(z1, fz1, 'k', z1, Pz1, 'b')
-ax1.set_title('[-5, -1.667]')
+ax1.set_title(f'[-5, {round(ub1,2)}]')
 ax2.plot(z2, fz2, 'k', z2, Pz2, 'b')
-ax2.set_title('[-1.667, 1.667]')
+ax2.set_title(f'[{round(ub1,2)}, {round(ub2,2)}]')
 ax3.plot(z3, fz3, 'k', z3, Pz3, 'b')
-ax3.set_title('[1.667, 5]')
+ax3.set_title(f'[{round(ub2,2)}, 5]')
 
 fig.legend(['f(x)', 'P_z(x)'])
 
